@@ -24,3 +24,11 @@ jobs:
 
       - name: Rodar testes
         run: pytest -v
+
+      - name: Enviar alerta no Discord
+        if: always()
+        run: |
+          curl -H "Content-Type: application/json" \
+               -X POST \
+               -d '{"content": "🚀 O workflow de CI/CD do repositório **pucpr-devops** foi executado por ${{ github.actor }}!"}' \
+               ${{ secrets.DISCORD_WEBHOOK }}
