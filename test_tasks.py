@@ -55,3 +55,5 @@ def test_add_multiple_tasks_increments_id():
     tasks = add_task("Tarefa 2", tasks=tasks, path=TEST_FILE)
     assert tasks[0]["id"] == 1
     assert tasks[1]["id"] == 2
+
+# Testes unitarios executados via GitHub Actions
