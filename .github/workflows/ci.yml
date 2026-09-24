@@ -32,3 +32,4 @@ jobs:
                -X POST \
                -d '{"content": "🚀 O workflow de CI/CD do repositório **pucpr-devops** foi executado por ${{ github.actor }}!"}' \
                ${{ secrets.DISCORD_WEBHOOK }}
+               # Testes unitarios executados via GitHub Actions
